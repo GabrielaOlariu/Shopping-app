@@ -1,5 +1,43 @@
-html, 
-body{
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  margin: 30px auto;
+}
+
+img {
+  width: 125px;
+  margin: 20px auto;
+}
+
+input {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  background-color: rgb(238, 245, 54);
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 28px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-color: rgb(76, 54, 245);
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 28px;
+  text-align: center;
+  margin: 10px 0;
 }
