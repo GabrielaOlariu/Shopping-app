@@ -20,10 +20,22 @@ const cartDB = ref(database, "gabrielaCart");
 //DOM Field
 const inputFieldEl = document.getElementById("input-field");
 const buttonAddEl = document.getElementById("button-add");
+const shoppinglistEl = document.getElementById("shopping-list");
 
 buttonAddEl.addEventListener("click", function () {
-  let inputValue = inputFieldEl.value;
-  console.log(inputValue);
-  push(cartDB, inputValue);
-  inputFieldEl.value = "";
+  if (inputFieldEl.value) {
+    let inputValue = inputFieldEl.value;
+    console.log(inputValue);
+    push(cartDB, inputValue);
+    appendItemShoppingListEl(inputValue);
+    clearInputFieldEl();
+  }
 });
+
+function clearInputFieldEl() {
+  inputFieldEl.value = "";
+}
+
+function appendItemShoppingListEl(x) {
+  shoppinglistEl.innerHTML += `<li>${x}</li>`;
+}
